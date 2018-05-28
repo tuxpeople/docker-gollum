@@ -11,7 +11,6 @@ RUN apk add --no-cache icu-dev icu-libs
 RUN apk add --no-cache cmake
 RUN apk add --no-cache git
 
-RUN gem install github-linguist
 RUN gem install gollum 
 
 RUN apk del cmake build-base build-deps
