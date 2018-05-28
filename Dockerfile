@@ -13,7 +13,7 @@ RUN apk add --no-cache git
 
 RUN gem install gollum 
 
-RUN apk del cmake build-base build-deps
+RUN apk del cmake build-base build-deps icu-dev
 
 # create a volume and
 WORKDIR /wiki
