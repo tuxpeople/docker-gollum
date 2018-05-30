@@ -12,6 +12,7 @@ RUN apk add --no-cache cmake
 RUN apk add --no-cache git
 
 RUN gem install gollum 
+RUN gem install github-markdown
 
 RUN apk del cmake build-base build-deps icu-dev
 
