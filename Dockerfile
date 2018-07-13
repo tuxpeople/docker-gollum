@@ -1,9 +1,10 @@
 FROM ruby:alpine3.7
 MAINTAINER Adhityaa Chandrasekar <c.adhityaa@gmail.com>
 
-RUN apk add --no-cache --virtual build-deps build-base icu-dev icu-libs cmake git \
+RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake \
+&& apk add --no-cache icu-libs git \
 && gem install gollum github-markdown \
-&& apk del cmake build-base build-deps icu-dev
+&& apk del build-deps
 
 # create a volume and
 WORKDIR /wiki
