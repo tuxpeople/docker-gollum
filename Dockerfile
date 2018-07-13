@@ -11,5 +11,5 @@ WORKDIR /wiki
 
 ENV GOLLUMARGS=""
 
-ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080 --live-preview $GOLLUMARGS"]
+ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080 $GOLLUMARGS"]
 EXPOSE 8080
