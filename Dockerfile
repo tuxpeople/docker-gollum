@@ -1,4 +1,4 @@
-FROM ruby:alpine3.7
+FROM ruby:alpine3.10
 MAINTAINER Adhityaa Chandrasekar <c.adhityaa@gmail.com>
 
 RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake \
