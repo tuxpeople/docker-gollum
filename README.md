@@ -1,24 +1,44 @@
+# gollum-small
+![Github Workflow Badge](https://github.com/tuxpeople/docker-gollum-small/actions/workflows/release.yml/badge.svg)
+![Github Last Commit Badge](https://img.shields.io/github/last-commit/tuxpeople/docker-gollum-small)
+![Docker Pull Badge](https://img.shields.io/docker/pulls/tdeutsch/gollum-small)
+![Docker Stars Badge](https://img.shields.io/docker/stars/tdeutsch/gollum-small)
+![Docker Size Badge](https://img.shields.io/docker/image-size/tdeutsch/gollum-small)
 
-### gollum-alpine
+## Quick reference
 
 This is yet another Docker image for [gollum](https://github.com/gollum/gollum), a simple wiki that stores documents in a git repository.
 
-[Other images exist](https://github.com/gollum/gollum/wiki/Gollum-via-Docker#3rd-party-docker-images-at-docker-hub), but they are all quite huge (for example, `suttang/gollum`, an Ubuntu 14.04 based image, is 600+ MB). Like all things Alpine, `adtac/gollum-alpine` is tiny at under 200 MB. Enjoy your extra storage!
+[Other images exist](https://github.com/gollum/gollum/wiki/Gollum-via-Docker#3rd-party-docker-images-at-docker-hub), but they are all quite huge (for example, `suttang/gollum`, an Ubuntu 14.04 based image, is 600+ MB).
 
-#### Usage
+* **Code repository:**
+  https://github.com/tuxpeople/docker-gollum
+* **Where to file issues:**
+  https://github.com/tuxpeople/docker-gollum/issues
+* **Supported architectures:**
+  ```amd64```, ```armv7```, ```armv6``` and ```arm64```
 
-Docker is pretty simple.
+## Image tags
+- ```latest``` always refers to the latest image
 
-```bash
-$ docker run -i -t -p 8080:8080 -v wiki:/wiki cuotos/gollum-alpine
+## Usage
+
+```sh
+docker run -i -t -p 8080:8080 -v wiki:/wiki tdeutsch/gollum-small:<tag>
 ```
 
-This will pull and run the `cuotos-alpine` image, exposing the website on port 8080, with persistent storage on a docker volume called `wiki`.
+or
+
+```sh
+docker run -i -t -p 8080:8080 -v wiki:/wiki quay.io/tdeutsch/gollum-small:<tag>
+```
+
+This will pull and run the `tdeutsch/gollum-small` image, exposing the website on port 8080, with persistent storage on a docker volume called `wiki`.
 
 Manual flags can be passed to the gollum binary using the environment variable `GOLLUMARGS=`
 
-```bash
-$ docker run -i -t -p 8080:8080 -v wiki:/wiki -e GOLLUMARGS="--no-edit" cuotos/gollum-alpine
+```sh
+docker run -i -t -p 8080:8080 -v wiki:/wiki -e GOLLUMARGS="--no-edit" tdeutsch/gollum-small
 ```
 
 Which will run gollum in "read only" mode and not allowing editing of pages via the ui. handy if this is being deployed remotely
