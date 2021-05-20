@@ -19,7 +19,9 @@ This is yet another Docker image for [gollum](https://github.com/gollum/gollum),
   ```amd64```, ```armv7```, ```armv6``` and ```arm64```
 
 ## Image tags
-- ```latest``` always refers to the latest image
+- ```latest``` always refers to the latest tagged release
+- There are tags for major, minor and dotreleases (eg. ```1.0.0```, ```1.0```, ```1``` )
+- ```edge``` gets automatically built on every push to master and also via a weekly cron job
 
 ## Usage
 
