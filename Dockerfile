@@ -1,12 +1,13 @@
-FROM ruby
+FROM ruby:alpine3.7
+MAINTAINER Adhityaa Chandrasekar <c.adhityaa@gmail.com>
 
-RUN apt-get -y update && apt-get -y install libicu-dev cmake && rm -rf /var/lib/apt/lists/*
-RUN gem install github-linguist
-RUN gem install gollum
+RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake \
+&& apk add --no-cache icu-libs git \
+&& gem install gollum github-markdown \
+&& apk del build-deps
 
+# create a volume and
 WORKDIR /wiki
 
-ENV GOLLUMARGS=""
-
-ENTRYPOINT ["/bin/sh", "-c", "git init && gollum $GOLLUMARGS"]
-EXPOSE 4567
+ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080 --live-preview"]
+EXPOSE 8080
