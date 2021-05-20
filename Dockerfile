@@ -1,4 +1,4 @@
-FROM ruby:alpine3.7
+FROM ruby:alpine3.13
 
 # hadolint ignore=DL3028,DL3018
 RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake openssl-dev \
