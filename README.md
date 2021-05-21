@@ -1,6 +1,6 @@
 # gollum-small
-![Github Workflow Badge](https://github.com/tuxpeople/docker-gollum-small/actions/workflows/release.yml/badge.svg)
-![Github Last Commit Badge](https://img.shields.io/github/last-commit/tuxpeople/docker-gollum-small)
+![Github Workflow Badge](https://github.com/tuxpeople/docker-gollum/actions/workflows/release.yml/badge.svg)
+![Github Last Commit Badge](https://img.shields.io/github/last-commit/tuxpeople/docker-gollum)
 ![Docker Pull Badge](https://img.shields.io/docker/pulls/tdeutsch/gollum-small)
 ![Docker Stars Badge](https://img.shields.io/docker/stars/tdeutsch/gollum-small)
 ![Docker Size Badge](https://img.shields.io/docker/image-size/tdeutsch/gollum-small)
