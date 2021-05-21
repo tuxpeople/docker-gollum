@@ -9,7 +9,7 @@
 
 This is yet another Docker image for [gollum](https://github.com/gollum/gollum), a simple wiki that stores documents in a git repository.
 
-[Other images exist](https://github.com/gollum/gollum/wiki/Gollum-via-Docker#3rd-party-docker-images-at-docker-hub), but they are all quite huge (for example, `suttang/gollum`, an Ubuntu 14.04 based image, is 600+ MB).
+[Other images exist](https://github.com/gollum/gollum/wiki/Gollum-via-Docker#3rd-party-docker-images-at-docker-hub), but they are all quite huge.
 
 * **Code repository:**
   https://github.com/tuxpeople/docker-gollum
