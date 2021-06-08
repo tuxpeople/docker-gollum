@@ -9,5 +9,5 @@ RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake openssl-dev
 # create a volume and
 WORKDIR /wiki
 
-ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080 --live-preview"]
+ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080"]
 EXPOSE 8080
