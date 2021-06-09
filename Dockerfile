@@ -1,4 +1,4 @@
-FROM tdeutsch/baseimage-alpine
+FROM tdeutsch/baseimage-alpine:latest
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
