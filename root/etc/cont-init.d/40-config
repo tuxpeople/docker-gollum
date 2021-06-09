@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+cd /wiki
+git init
+
+# permissions
+chown -R abc:abc \
+	/app \
+	/wiki
+
+# run 
+exec \
+	s6-setuidgid abc /app/gollum.sh

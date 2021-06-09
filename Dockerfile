@@ -1,13 +1,18 @@
-FROM ruby:alpine3.13
+FROM ghcr.io/linuxserver/baseimage-alpine:3.13
+
+# environment settings
+ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 
 # hadolint ignore=DL3028,DL3018
-RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake openssl-dev \
-&& apk add --no-cache icu-libs git \
-&& gem install gollum github-markdown \
+RUN apk add --no-cache --virtual build-deps build-base icu-dev cmake openssl-dev ruby-dev zlib-dev \
+&& apk add --no-cache icu-libs git ruby \
+&& gem install gollum github-markdown rdoc etc \
 && apk del build-deps
 
-# create a volume and
+# add local files
+COPY root/ /
+
+# create a volume
 WORKDIR /wiki
 
-ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080"]
 EXPOSE 8080
