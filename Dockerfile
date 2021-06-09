@@ -1,3 +1,4 @@
+# hadolint ignore=DL3007
 FROM tdeutsch/baseimage-alpine:latest
 
 # environment settings
