@@ -16,7 +16,7 @@ This is yet another Docker image for [gollum](https://github.com/gollum/gollum),
 * **Where to file issues:**
   https://github.com/tuxpeople/docker-gollum/issues
 * **Supported architectures:**
-  ```amd64```, ```armv7```, ```armv6``` and ```arm64```
+  ```amd64```, ```armv7``` and ```arm64```
 
 ## Image tags
 - ```latest``` always refers to the latest tagged release
