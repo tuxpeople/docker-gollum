@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM tdeutsch/baseimage-alpine:latest
+FROM ghcr.io/tuxpeople/baseimage-alpine:latest
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
