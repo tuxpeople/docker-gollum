@@ -10,4 +10,4 @@ cd /wiki
 git init
 
 # run 
-exec s6-setuidgid abc gollum-svc
+exec s6-setuidgid abc gollum --port 8080
