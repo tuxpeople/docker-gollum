@@ -2,12 +2,11 @@
 
 # permissions
 echo "Changeing Permissions, this may take a while if you have many files..."
-chown -R abc:abc \
-	/app \
-	/wiki
+chown -R abc:abc /wiki
 
-cd /wiki
-git init
+cd /wiki && git init
 
 # run 
+#/usr/bin/with-contenv bash
+export HOME="/wiki"
 exec s6-setuidgid abc gollum --port 8080

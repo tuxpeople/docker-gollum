@@ -33,3 +33,4 @@ fi
 chown abc:abc /app
 chown abc:abc /config
 chown abc:abc /defaults
+chown abc:abc /wiki
