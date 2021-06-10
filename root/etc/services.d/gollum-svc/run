@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv bash
+cd /wiki
+gollum --port 8080
