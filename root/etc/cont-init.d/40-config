@@ -1,9 +1,13 @@
 #!/usr/bin/with-contenv bash
 
 # permissions
+echo "Changeing Permissions, this may take a while if you have many files..."
 chown -R abc:abc \
 	/app \
 	/wiki
 
+cd /wiki
+git init
+
 # run 
-exec s6-setuidgid abc /app/gollum.sh
+exec s6-setuidgid abc gollum
