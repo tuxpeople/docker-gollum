@@ -9,4 +9,4 @@ cd /wiki && git init
 # run 
 #/usr/bin/with-contenv bash
 export HOME="/wiki"
-exec s6-setuidgid abc gollum --port 8080
+exec s6-setuidgid abc gollum --port 8080 --h1-title
