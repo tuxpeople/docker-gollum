@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.16-version-b612671e
+FROM ghcr.io/linuxserver/baseimage-alpine:3.16
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
