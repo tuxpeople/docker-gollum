@@ -1,3 +1,4 @@
+# hadolint ignore=DL3029
 FROM --platform=$BUILDPLATFORM lscr.io/linuxserver/baseimage-alpine:3.15
 
 # environment settings
