@@ -1,5 +1,5 @@
 # hadolint ignore=DL3029
-FROM --platform=$BUILDPLATFORM lscr.io/linuxserver/baseimage-alpine:3.15
+FROM --platform=$TARGETPLATFORM lscr.io/linuxserver/baseimage-alpine:3.15
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
