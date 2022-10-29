@@ -1,6 +1,6 @@
 FROM lscr.io/linuxserver/baseimage-alpine:3.15
 
-FROM lscr.io/linuxserver/baseimage-alpine:${TARGETPLATFORM}${TARGETVARIANT}3.15
+FROM lscr.io/linuxserver/baseimage-alpine:${TARGETARCH}${TARGETVARIANT}-3.15
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
