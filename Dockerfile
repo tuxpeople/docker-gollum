@@ -1,4 +1,4 @@
-FROM lscr.io/linuxserver/baseimage-alpine:3.17
+FROM lscr.io/linuxserver/baseimage-alpine:3.18
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
